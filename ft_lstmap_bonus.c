@@ -6,11 +6,17 @@
 /*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:00:48 by trusanov          #+#    #+#             */
-/*   Updated: 2023/10/10 19:53:53 by trusanov         ###   ########.fr       */
+/*   Updated: 2023/10/11 11:54:23 by trusanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	*norminette_sucks(void (*del)(void *), t_list *content_temp)
+{
+	del(content_temp);
+	return (NULL);
+}
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -23,10 +29,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	content_temp = f(lst->content);
 	ret = ft_lstnew(content_temp);
 	if (!ret)
-	{
-		del(content_temp);
-		return (NULL);
-	}
+		return (norminette_sucks(del, content_temp));
 	lst = lst->next;
 	ret_it = ret;
 	while (lst)
@@ -35,9 +38,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		ret_it->next = ft_lstnew(content_temp);
 		if (!ret_it->next)
 		{
-			del(content_temp);
 			ft_lstclear(&ret, del);
-			return (NULL);
+			return (norminette_sucks(del, content_temp));
 		}
 		lst = lst->next;
 		ret_it = ret_it->next;
