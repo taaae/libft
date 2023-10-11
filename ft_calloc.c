@@ -6,7 +6,7 @@
 /*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 11:59:06 by trusanov          #+#    #+#             */
-/*   Updated: 2023/10/08 12:46:57 by trusanov         ###   ########.fr       */
+/*   Updated: 2023/10/11 18:07:51 by trusanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,4 @@ void	*ft_calloc(size_t count, size_t size)
 		i++;
 	}
 	return (res);
-	return (NULL);
 }
