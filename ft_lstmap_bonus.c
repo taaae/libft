@@ -22,7 +22,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*ret;
 	t_list	*ret_it;
-	t_list	*content_temp;
+	void	*content_temp;
 
 	if (lst == NULL || f == NULL)
 		return (NULL);
