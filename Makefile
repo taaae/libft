@@ -6,7 +6,7 @@
 #    By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/08 09:59:45 by trusanov          #+#    #+#              #
-#    Updated: 2023/10/10 13:35:04 by trusanov         ###   ########.fr        #
+#    Updated: 2023/10/26 14:23:24 by trusanov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,11 @@ SOURCES := \
 		ft_memcmp.c \
 		ft_putnbr_fd.c \
 		ft_strjoin.c \
-		ft_strnstr.c
+		ft_strnstr.c \
+		ft_printf.c \
+		put_dec.c \
+		put_ptr.c \
+		put_str.c
 
 BONUS_SRC := \
 		ft_lstadd_back_bonus.c \

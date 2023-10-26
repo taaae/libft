@@ -6,7 +6,7 @@
 /*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:19:24 by trusanov          #+#    #+#             */
-/*   Updated: 2023/10/09 16:00:37 by trusanov         ###   ########.fr       */
+/*   Updated: 2023/10/26 14:19:39 by trusanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+int		ft_printf(const char *str, ...);
 
 int		ft_isalpha(int ch);
 int		ft_isdigit(int ch);
