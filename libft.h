@@ -6,7 +6,7 @@
 /*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:19:24 by trusanov          #+#    #+#             */
-/*   Updated: 2023/10/26 14:19:39 by trusanov         ###   ########.fr       */
+/*   Updated: 2023/10/27 15:46:26 by trusanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
 
 int		ft_printf(const char *str, ...);
 
@@ -61,6 +55,14 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
+// BONUS
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
@@ -70,5 +72,27 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+// GNL
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 128
+# endif
+
+# ifndef LINE_INITIAL_CAP
+#  define LINE_INITIAL_CAP 128
+# endif
+
+char	*get_next_line(int fd);
+
+typedef struct s_line
+{
+	char	*buf;
+	size_t	len;
+	size_t	cap;
+}	t_line;
+
+int		line_push(t_line *line, char c);
+t_line	new_line(int *malloc_signal);
 
 #endif
