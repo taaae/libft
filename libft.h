@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tae <tae@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:19:24 by trusanov          #+#    #+#             */
-/*   Updated: 2023/10/27 15:46:26 by trusanov         ###   ########.fr       */
+/*   Updated: 2023/10/29 15:38:38 by tae              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,25 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 char	*get_next_line(int fd);
 
+// t_string
+
+# define INIT_TSTRING_CAP 32
+
+typedef struct s_string
+{
+	char	*buf;
+	size_t	size;
+	size_t	cap;
+}	t_string;
+
+t_string	*tstring_new(void);
+void	*tstring_push_back(t_string *this, char c);
+char	tstring_pop_back(t_string *this);
+void	tstring_free(t_string *this);
+
+void	tstring_print(const t_string *this);
+
+// USELESS
 typedef struct s_line
 {
 	char	*buf;

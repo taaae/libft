@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+         #
+#    By: tae <tae@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/08 09:59:45 by trusanov          #+#    #+#              #
-#    Updated: 2023/10/27 15:39:12 by trusanov         ###   ########.fr        #
+#    Updated: 2023/10/29 15:27:00 by tae              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,9 @@ SOURCES := \
 		put_dec.c \
 		put_ptr.c \
 		put_str.c \
-		get_next_line.c
+		get_next_line.c \
+		t_string.c \
+		t_string_utils.c
 
 BONUS_SRC := \
 		ft_lstadd_back_bonus.c \
