@@ -6,7 +6,7 @@
 /*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:19:24 by trusanov          #+#    #+#             */
-/*   Updated: 2023/11/14 17:38:54 by trusanov         ###   ########.fr       */
+/*   Updated: 2023/11/14 18:13:51 by trusanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,7 @@ typedef struct s_line
 int			line_push(t_line *line, char c);
 t_line		new_line(int *malloc_signal);
 
-int	ft_max(int count, ...);
-int	ft_min(int count, ...);
+int			ft_max(int count, ...);
+int			ft_min(int count, ...);
 
 #endif
