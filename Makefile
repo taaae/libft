@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tae <tae@student.42.fr>                    +#+  +:+       +#+         #
+#    By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/08 09:59:45 by trusanov          #+#    #+#              #
-#    Updated: 2023/10/29 15:27:00 by tae              ###   ########.fr        #
+#    Updated: 2023/11/14 16:37:46 by trusanov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,15 +72,20 @@ NAME = libft.a
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	ar rc $(NAME) $(OBJECTS)
+	@echo "building libft"
+	@ar rc $(NAME) $(OBJECTS)
 
 bonus: all $(BONUS_OBJ)
 	ar r $(NAME) $(BONUS_OBJ)
 
 clean:
-	rm -f $(OBJECTS) $(BONUS_OBJ)
+	@echo "cleaning libft"
+	@rm -f $(OBJECTS) $(BONUS_OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
+
+%o: %c
+	@cc $(CFLAGS) -o $@ -c $<
