@@ -6,7 +6,7 @@
 #    By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/08 09:59:45 by trusanov          #+#    #+#              #
-#    Updated: 2023/11/14 16:37:46 by trusanov         ###   ########.fr        #
+#    Updated: 2023/11/14 17:37:51 by trusanov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,8 @@ SOURCES := \
 		put_str.c \
 		get_next_line.c \
 		t_string.c \
-		t_string_utils.c
+		t_string_utils.c \
+		ft_min_max.c
 
 BONUS_SRC := \
 		ft_lstadd_back_bonus.c \
