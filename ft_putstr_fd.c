@@ -6,13 +6,13 @@
 /*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:31:06 by trusanov          #+#    #+#             */
-/*   Updated: 2023/10/07 17:32:49 by trusanov         ###   ########.fr       */
+/*   Updated: 2023/11/18 12:59:02 by trusanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(const char *s, int fd)
 {
 	write(fd, s, ft_strlen(s));
 }
