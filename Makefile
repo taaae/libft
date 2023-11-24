@@ -6,7 +6,7 @@
 #    By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/08 09:59:45 by trusanov          #+#    #+#              #
-#    Updated: 2023/11/14 17:37:51 by trusanov         ###   ########.fr        #
+#    Updated: 2023/11/24 11:54:08 by trusanov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,9 +53,7 @@ SOURCES := \
 		get_next_line.c \
 		t_string.c \
 		t_string_utils.c \
-		ft_min_max.c
-
-BONUS_SRC := \
+		ft_min_max.c \
 		ft_lstadd_back_bonus.c \
 		ft_lstclear_bonus.c \
 		ft_lstiter_bonus.c \
@@ -67,7 +65,6 @@ BONUS_SRC := \
 		ft_lstnew_bonus.c
 
 OBJECTS = $(SOURCES:.c=.o)
-BONUS_OBJ = $(BONUS_SRC:.c=.o)
 NAME = libft.a
 
 all: $(NAME)
@@ -76,12 +73,9 @@ $(NAME): $(OBJECTS)
 	@echo "building libft"
 	@ar rc $(NAME) $(OBJECTS)
 
-bonus: all $(BONUS_OBJ)
-	ar r $(NAME) $(BONUS_OBJ)
-
 clean:
 	@echo "cleaning libft"
-	@rm -f $(OBJECTS) $(BONUS_OBJ)
+	@rm -f $(OBJECTS)
 
 fclean: clean
 	@rm -f $(NAME)
